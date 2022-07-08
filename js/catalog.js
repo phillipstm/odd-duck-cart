@@ -5,12 +5,12 @@
 // Set up an empty cart for use on this page.
 const cart = new Cart([]);
 
-if (cart.items) {
-  cart.updateCounter();
-  // for (let i = 0; i < cart.items.length; i++) {
-  //   updateCartPreview(cart.items[i]);
-  // }
-}
+// if (cart.items) {
+//   cart.updateCounter();
+//   // for (let i = 0; i < cart.items.length; i++) {
+//   //   updateCartPreview(cart.items[i]);
+//   // }
+// }
 // On screen load, we call this method to put all of the product options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
