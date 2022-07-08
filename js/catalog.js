@@ -5,6 +5,12 @@
 // Set up an empty cart for use on this page.
 const cart = new Cart([]);
 
+if (cart.items) {
+  cart.updateCounter();
+  // for (let i = 0; i < cart.items.length; i++) {
+  //   updateCartPreview(cart.items[i]);
+  // }
+}
 // On screen load, we call this method to put all of the product options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
@@ -49,7 +55,9 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+function updateCounter() {
+  document.getElementById('itemCount').textContent = cart.length;
+ }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
